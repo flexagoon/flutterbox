@@ -8,7 +8,7 @@ RUN useradd -m --shell=/bin/bash build && usermod -L build && \
 # Install required packages
 USER build
 WORKDIR /home/build
-RUN paru -S --noconfirm flutter sdkmanager jdk-openjdk
+RUN paru -Syu --noconfirm flutter sdkmanager jdk-openjdk
 
 # Cleanup
 USER root
