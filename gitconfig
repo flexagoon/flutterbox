@@ -1,0 +1,3 @@
+# Suppress git ownership warning
+[safe]
+    directory = /opt/flutter
