@@ -32,7 +32,7 @@ RUN mkdir -p $ANDROID_HOME && \
         "platform-tools"
 
 # Fix permission issues
-RUN mkdir -m 666 $ANDROID_HOME/licenses && \
+RUN mkdir -m 777 $ANDROID_HOME/licenses && \
     chmod o+w /opt/flutter/packages/flutter_tools/.dart_tool
 
 # Copy configuration files
