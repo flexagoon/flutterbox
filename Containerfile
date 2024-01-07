@@ -8,7 +8,10 @@ RUN useradd -m --shell=/bin/bash build && usermod -L build && \
 # Install required packages
 USER build
 WORKDIR /home/build
-RUN paru -Syu --noconfirm flutter sdkmanager jdk-openjdk
+RUN paru -Syu --noconfirm \
+    flutter \
+    sdkmanager jdk17-openjdk \ # Android
+    clang cmake gtk3 # Linux
 
 # Cleanup
 USER root
