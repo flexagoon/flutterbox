@@ -35,4 +35,7 @@ RUN mkdir -p $ANDROID_HOME && \
 RUN mkdir -m 666 $ANDROID_HOME/licenses && \
     chmod o+w /opt/flutter/packages/flutter_tools/.dart_tool
 
-COPY ./skel/* /etc/skel/
+# Copy configuration files
+COPY ./skel/gitconfig /etc/skel/.gitconfig
+RUN mkdir -p /etc/skel/.config
+COPY ./skel/flutter_settings /etc/skel/.config/settings
