@@ -13,4 +13,6 @@ distrobox-export --bin /opt/flutter/bin/dart
 distrobox-export --bin /opt/flutter/bin/flutter
 ```
 
+**NOTE:** You need to make sure that the `~/.local/share/flutterbox` directory is empty before you install flutterbox. There are multiple configuration files in `/etc/skel` which only get copied when a new home directory is created.
+
 You can now use the `flutter` and `dart` commands from your host system.
