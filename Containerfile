@@ -10,8 +10,8 @@ USER build
 WORKDIR /home/build
 RUN paru -Syu --noconfirm \
     flutter \
-    sdkmanager jdk17-openjdk \ # Android
-    clang cmake gtk3 # Linux
+    sdkmanager jdk17-openjdk \
+    clang cmake gtk3
 
 # Cleanup
 USER root
