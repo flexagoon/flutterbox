@@ -2,6 +2,8 @@
 
 A [Distrobox](https://distrobox.it) image for containerized Flutter installation.
 
+Based on [boxkit](https://github.com/ublue-os/boxkit)
+
 ## Usage
 
 Install distrobox and run the following commands:
