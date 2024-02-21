@@ -11,6 +11,7 @@ WORKDIR /home/build
 RUN paru -Syu --noconfirm \
     flutter \
     sdkmanager jdk17-openjdk \
+    android-tools \
     clang cmake gtk3
 
 # Cleanup
