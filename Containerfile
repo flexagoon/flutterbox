@@ -26,9 +26,7 @@ RUN userdel -r build && \
         /var/cache/pacman/pkg/*
 
 # Android SDK setup
-ENV ANDROID_HOME="/opt/android-sdk"
-RUN mkdir -p $ANDROID_HOME && \
-    sdkmanager \
+RUN sdkmanager \
         "tools" \
         "platforms;android-34" \
         "build-tools;34.0.0" \
@@ -36,8 +34,7 @@ RUN mkdir -p $ANDROID_HOME && \
         "platform-tools"
 
 # Fix permission issues
-RUN mkdir -m 777 $ANDROID_HOME/licenses && \
-    chmod o+w /opt/flutter/packages/flutter_tools/.dart_tool
+RUN mkdir -m 777 /opt/android-sdk/licenses
 
 # Copy configuration files
 COPY ./skel/* /etc/skel/
